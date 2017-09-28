@@ -23,8 +23,6 @@ typedef NS_ENUM(NSUInteger, AMMarketScrollViewStyle){
     AMMarketScrollViewStyleAnnouncement = 2,    //公告模式(左侧标签+文言+右侧关闭按钮)
 };
 
-static NSTimeInterval const kDefaultAnimationDuration = 1.0;
-
 @interface AMMarketConfigation : NSObject
 
 /**

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AMMarketScrollView.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    AMMarketScrollView *scrollView = [[AMMarketScrollView alloc]initWithFrame:CGRectMake(50, 100, CGRectGetWidth(self.view.frame)-100, 50)];
+    scrollView.marketConfigation = [AMMarketConfigation defaultConfiguration];
+    [scrollView startWithCloseHandler:^(NSNumber * _Nullable currentTime) {
+        
+    } clickHandler:^(NSNumber * _Nullable index) {
+        
+    }];
+    [self.view addSubview:scrollView];
 }
 
 
